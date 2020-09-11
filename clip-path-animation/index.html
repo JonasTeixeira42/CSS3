@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clip-path Animation</title>
+
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background: #ffffe7;
+        font-family: Ubuntu;
+      }
+
+      .tooltip {
+        background: #00b6ff;
+        color: white;
+        padding: 1rem;
+        border-radius: 10px;
+        width: 250px;
+        clip-path: circle(10% at 90% 20%);
+        transition: all 0.3s ease-in-out;
+        cursor: pointer;
+      }
+
+      .tooltip:hover {
+        clip-path: circle(100%);
+        background: #e66ceb;
+      }
+
+      .tooltip:hover span {
+        opacity: 0;
+      }
+
+      .icon {
+        float: right;
+        font-weight: bold;
+        margin-right: 3%;
+        transition: opacity 0.3s;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="tooltip">
+      <span class="icon">i</span>
+      <h1>Olá</h1>
+      <p>não se esqueça de se inscrever no canal e compartilhar</p>
+    </div>
+  </body>
+</html>
