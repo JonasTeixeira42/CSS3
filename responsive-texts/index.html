@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Text</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      h1 {
+        color: #fff;
+        font-family: Ubuntu;
+        text-align: center;
+      }
+
+      section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 50vh;
+        padding: 10px;
+      }
+
+      .max {
+        background: #98c1d9;
+      }
+
+      .max h1 {
+        font-size: max(60px, 5vw);
+      }
+
+      .min {
+        background: #ee6c4d;
+      }
+
+      .min h1 {
+        font-size: min(150px, 10vw);
+      }
+    </style>
+  </head>
+  <body>
+    <section class="max">
+      <h1>Texto Responsivo</h1>
+    </section>
+    <section class="min">
+      <h1>Isso é demais!</h1>
+    </section>
+  </body>
+</html>
