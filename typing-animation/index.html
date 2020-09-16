@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      font-family: monospace;
+      background-color: #000;
+      color: white;
+    }
+
+    .line {
+      display: flex;
+      align-items: center;
+      border-right: 2px solid rgba(255, 255, 255, 0.75);
+      color: #fff;
+      font-family: monospace;
+      font-size: 3rem;
+      white-space: nowrap;
+      max-width: 0vw;
+      overflow: hidden;
+      animation: blinkCursor 1s steps(40) infinite both,
+        typing 4s steps(100) 1s both;
+    }
+
+    @keyframes typing {
+      to {
+        max-width: 100vw;
+      }
+    }
+
+    @keyframes blinkCursor {
+      from {
+        border-right-color: rgba(255, 255, 255, 0.75);
+      }
+
+      to {
+        border-right-color: transparent;
+      }
+    }
+  </style>
+  <body>
+    <p class="line">Coé, meu nome é Jonas Teixeira =)</p>
+  </body>
+</html>
